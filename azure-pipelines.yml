@@ -7,6 +7,9 @@ steps:
     inputs:
       command: 'custom'
       customcommand: 'install --production'
+  - script: 'npm audit fix'
+    displayname: 'Fixing npm version'
+    continueOnError: true 
   - script: 'npm test'
     displayName: 'Run unit tests'
     continueOnError: true
